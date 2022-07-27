@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "category": "Bikes",
+    "subCategory": ["Motor Cycle", "Scooter", "Spare Part", "Bicycle"]
+  },
+  {
+    "id": 2,
+    "category": "Electronics and Appliances",
+    "subCategory": [
+      "Television",
+      "Video",
+      "Audio",
+      "Computer",
+      "Laptop",
+      "Harddisk",
+      "printer",
+      "AC",
+      "Washing Machine",
+      "Fridge",
+      "Camera",
+      "Lense",
+      "Kitchen",
+      "Game and Entertainment"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Data Entry and Office",
+    "subCategory": [
+      "Sales and Marketing",
+      "Driver",
+      "Office Assistant",
+      "Delivery and Collection",
+      "Teacher",
+      "Cook",
+      "Operator and Technician",
+      "Receptionist and Front Office",
+      "IT Enginner and Develpoer",
+      "Hotels and Travel Executive",
+      "Accountant",
+      "Designer"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Books and Health",
+    "subCategory": [
+      "Skin Care",
+      "Comics",
+      "Academic Books",
+      "Perfumes and Fragrances",
+      "Body Care"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Mobile and Accessories",
+    "subCategory": [
+      "Iphone",
+      "Samsung",
+      "Redmi",
+      "Poco",
+      "Realme",
+      "Nokia",
+      "Infix",
+      "Motorola"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Sports and Fitness",
+    "subCategory": ["Gym Equipments", "Bicycles", "Bicycle Part", "Others"]
+  },
+  {
+    "id": 7,
+    "category": "Toys and Games",
+    "subCategory": [
+      "Gaming Consoles",
+      "Gaming Accessories",
+      "Educational-Toys",
+      "Outdoor-Toys",
+      "Indoor-Toys"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Real Estate",
+    "subCategory": [
+      "Room Rent",
+      "Flat",
+      "House",
+      "Land",
+      "Appartment",
+      "Paying Guests"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Music",
+    "subCategory": [
+      "Drums",
+      "Guitar",
+      "Cajons",
+      "Pianos",
+      "DJ Gear",
+      "Amps and Speakers",
+      "Others"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Automobiles",
+    "subCategory": ["Cars", "Jeep", "Tractors", "Trucks", "Parts"]
+  }
+]

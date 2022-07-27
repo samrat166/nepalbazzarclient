@@ -1,0 +1,18 @@
+.add__a__post__div__main {
+  width: 70%;
+  height: 110vh;
+  margin-top: 20px;
+  border-radius: 14px;
+  box-shadow: 1px 1px 10px #837d7d, -1px -1px 7px #ffffff;
+  color: rgb(231, 224, 224);
+  position: relative;
+}
+.arrow__button__main:focus {
+  outline: none !important;
+}
+
+@media screen and (max-width: 900px) {
+  .add__a__post__div__main {
+    height: auto !important;
+  }
+}

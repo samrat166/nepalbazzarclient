@@ -1,0 +1,32 @@
+.home__icon__main {
+  font-size: 35px !important;
+  cursor: pointer;
+}
+.add__post {
+  font-size: 32px !important;
+}
+.image__main {
+  width: 70%;
+  height: auto;
+}
+.input__nav__main {
+  border: none !important;
+  border-radius: none !important;
+}
+.input__nav__main:focus {
+  border: none !important;
+  border-radius: none !important;
+}
+.link__hover {
+  text-decoration: none;
+}
+.link__hover:hover {
+  text-decoration: none;
+  color: #550808;
+}
+
+@media screen and (max-width: 1075px) {
+  .navbar {
+    display: none !important;
+  }
+}

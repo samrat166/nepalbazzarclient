@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "category": "Bikes",
+    "subCategory": ["Motor Cycle", "Scooter", "Spare Part", "Bicycle"]
+  },
+  {
+    "id": 2,
+    "category": "Electronics and Appliances",
+    "subCategory": [
+      "Television",
+      "Video",
+      "Audio",
+      "Computer",
+      "Laptop",
+      "Harddisk",
+      "printer",
+      "AC",
+      "Washing Machine",
+      "Fridge",
+      "Camera",
+      "Lense",
+      "Kitchen",
+      "Game and Entertainment"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Data Entry and Office",
+    "subCategory": [
+      "Sales and Marketing",
+      "Driver",
+      "Office Assistant",
+      "Delivery and Collection",
+      "Teacher",
+      "Cook",
+      "Operator and Technician",
+      "Receptionist and Front Office",
+      "IT Enginner and Develpoer",
+      "Hotels and Travel Executive",
+      "Accountant",
+      "Designer"
+    ]
+  }
+]

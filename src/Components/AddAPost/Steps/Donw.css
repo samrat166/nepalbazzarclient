@@ -1,0 +1,13 @@
+.button__post__main {
+  width: 100px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: black;
+  margin-top: 30px;
+}
+
+.button__post__main:hover {
+  color: white;
+  background-color: black;
+}

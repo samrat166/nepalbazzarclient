@@ -1,0 +1,12 @@
+.notification__button__main {
+  outline: none !important;
+}
+.notification__button__main:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.active__value {
+  border-bottom: 2px solid black;
+  color: black !important;
+}

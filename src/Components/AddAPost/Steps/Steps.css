@@ -1,0 +1,5 @@
+@media screen and (max-width: 900px) {
+  .post__main__app {
+    width: 90% !important;
+  }
+}

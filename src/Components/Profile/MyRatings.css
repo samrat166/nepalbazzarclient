@@ -1,0 +1,10 @@
+.ratings__user__main {
+  height: 49vh;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 600px) {
+  .ratings__user__main {
+    height: auto !important;
+  }
+}

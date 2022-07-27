@@ -1,0 +1,47 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (min-width: 1076px) {
+  .chat__main__div {
+    width: 60vw !important;
+  }
+}
+
+.comment__main__div {
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px;
+  min-height: 170px;
+  color: black;
+}
+
+.comment__main__div__seller {
+  color: black;
+
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+  min-height: 170px;
+}
+
+.seller__message {
+  background-color: #f0f2f5;
+}

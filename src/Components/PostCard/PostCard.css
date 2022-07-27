@@ -1,0 +1,26 @@
+@media screen and (max-width: 600px) {
+  .Product__image {
+    height: 300px !important;
+  }
+}
+.sold-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 5px;
+  height: 25px;
+  width: 80px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(194, 65, 65);
+}
+.img__wrapper {
+  width: 500px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.img__wrapper img {
+  width: 100%;
+}

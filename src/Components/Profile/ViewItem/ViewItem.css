@@ -1,0 +1,14 @@
+.opened__div {
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .jsdhfsghdj {
+    width: 75% !important;
+  }
+}
+
+.main__sell__to__buyer:hover {
+  background-color: black;
+  color: white;
+}

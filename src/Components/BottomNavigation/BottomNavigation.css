@@ -1,0 +1,6 @@
+@media screen and (min-width: 1076px) {
+  .main__div__nav {
+    display: none !important;
+    z-index: 10;
+  }
+}

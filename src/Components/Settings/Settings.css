@@ -1,0 +1,8 @@
+@media screen and (max-width: 602px) {
+  .input__field__update {
+    width: 70% !important;
+  }
+  .input__button__update__pass {
+    width: 40% !important;
+  }
+}
