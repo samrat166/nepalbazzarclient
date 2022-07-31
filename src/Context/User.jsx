@@ -11,6 +11,8 @@ const UserProvider = ({ children }) => {
   const [error, setError] = useState("");
   const [render1, setRender1] = useState(false);
   const [userData1, setUserData1] = useState({});
+  const [searchedResult, setSearchedResult] = useState([]);
+  const [searchedResultLoading, setSearchedResultLoading] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -47,6 +49,10 @@ const UserProvider = ({ children }) => {
     setRender1,
     render1,
     userData1,
+    setSearchedResult,
+    searchedResult,
+    setSearchedResultLoading,
+    searchedResultLoading,
   };
 
   return (

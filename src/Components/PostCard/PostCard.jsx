@@ -14,7 +14,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import moment from "moment";
 const PostCard = ({ value }) => {
-  console.log(value);
   const { user } = useContext(UserContext);
   const [sold, setSold] = useState(false);
   const timeInMinute =
@@ -95,7 +94,10 @@ const PostCard = ({ value }) => {
             </Link>
           )
         ) : null}
-        <div style={{ backgroundColor: "#EFEFEF" }} className="mt-1 p-1 ">
+        <div
+          style={{ backgroundColor: "#EFEFEF", height: "150px" }}
+          className="mt-1 p-1 "
+        >
           <div className="d-flex align-items-center mt-1 mb-1 ml-1">
             {user && value.userId ? (
               user._id === value.userId._id ? (

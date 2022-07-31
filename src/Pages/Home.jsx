@@ -4,6 +4,7 @@ import Category from "../Components/Category/Category";
 import HowToBecomeASeller from "../Components/HowToBecomeASeller/HowToBecomeASeller";
 import PostByLocation from "../Components/PostByLocation/PostByLocation";
 import LatestPost from "../Components/PostCard/LatestPost/LatestPost";
+import SearchedResult from "../Components/SearchedResult/SearchedResult";
 
 const Home = () => {
   const [button, setButton] = useState([
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <>
       <Category />
+      <SearchedResult />
       <div
         style={{ display: "flex", justifyContent: "center" }}
         className="container  py-3 mx-auto"

@@ -1,38 +1,25 @@
 import { Skeleton } from "@mui/material";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import PostCard from "../PostCard";
+import React, { useContext } from "react";
+import { UserContext } from "../../Context/User";
+import PostCard from "../PostCard/PostCard";
 
-const LatestPost = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        setLoading(true);
-        const { data } = await axios.get(
-          "http://localhost:4000/api/v1/posts/all"
-        );
-        setPosts(data.msg !== "No post at all" ? data.msg : null);
-        setLoading(false);
-      } catch (error) {
-        console.log(error.message);
-        setLoading(false);
-      }
-    };
-    fetchPosts();
-  }, []);
+const SearchedResult = () => {
+  const { searchedResult, searchedResultLoading } = useContext(UserContext);
   return (
     <>
+      {searchedResult.length > 0 && (
+        <h4>{searchedResult.length} Search Results Found.</h4>
+      )}
+
       <div
         className="container latestPost__card__main"
         style={{ overflowX: "hidden" }}
       >
         <div className="row">
-          {loading ? (
+          {searchedResultLoading ? (
             <>
-              {posts
-                ? posts.slice(0, 12).map((value) => {
+              {searchedResult
+                ? searchedResult.slice(0, 12).map((value) => {
                     return (
                       <>
                         <div
@@ -70,8 +57,8 @@ const LatestPost = () => {
             </>
           ) : (
             <>
-              {posts
-                ? posts.slice(0, 12).map((value) => {
+              {searchedResult
+                ? searchedResult.slice(0, 12).map((value) => {
                     return (
                       <>
                         <div
@@ -92,4 +79,4 @@ const LatestPost = () => {
   );
 };
 
-export default LatestPost;
+export default SearchedResult;

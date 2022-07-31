@@ -7,6 +7,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -23,13 +24,24 @@ import logo from "./logo.png";
 import Notifications from "../Notifications/Notifications";
 import { UserContext } from "../../Context/User";
 import { SecondaryNavbar } from "./SecondaryNavbar/SecondaryNavbar";
+import { apiRequestHelper } from "../../Helpers/ApiHelpers";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openNotification, setOpenNotification] = useState(false);
   const [render, setRender] = useState(false);
   const { pathname } = useLocation();
-  const { user, setUser, render1, setRender1 } = useContext(UserContext);
+  const {
+    user,
+    setUser,
+    render1,
+    setRender1,
+    setSearchedResult,
+    searchedResult,
+    setSearchedResultLoading,
+  } = useContext(UserContext);
   const [user1, setUser1] = useState({});
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
 
   const handleLogout = () => {
     setUser({});
@@ -37,6 +49,25 @@ const Navbar = () => {
     setRender(!render);
     setRender1(!render1);
   };
+  const handleSearch = async () => {
+    if (name === "") {
+      return setSearchedResult([]), setLocation("");
+    }
+
+    setSearchedResultLoading(true);
+    const response = await apiRequestHelper(
+      `find/location/name/${name}/${location ? location : "kathmandu"}`,
+      "get"
+    );
+    response.isError
+      ? setSearchedResultLoading(false)
+      : setSearchedResultLoading(false);
+    setSearchedResultLoading(false);
+    console.log(response);
+    setSearchedResult(response.data);
+  };
+  console.log(searchedResult);
+
   useEffect(() => {
     setUser1(JSON.parse(localStorage.getItem("userInfo")));
   }, [pathname, render]);
@@ -93,6 +124,9 @@ const Navbar = () => {
                   type="search"
                   placeholder="I am searching "
                   aria-label="Search"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onKeyUp={handleSearch}
                 />
               </form>
               <form
@@ -106,6 +140,10 @@ const Navbar = () => {
                   type="search"
                   placeholder="Location"
                   aria-label="Search"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  onKeyUp={handleSearch}
+                  disabled={name === ""}
                 />
               </form>
             </div>
@@ -239,8 +277,18 @@ const Navbar = () => {
                         Profile
                       </MenuItem>
                     </NavLink>
-
                     <Divider />
+                    <NavLink
+                      to="/admin-panel"
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      <MenuItem>
+                        <ListItemIcon>
+                          <AdminPanelSettingsIcon fontSize="small" />
+                        </ListItemIcon>
+                        Admin Panel
+                      </MenuItem>
+                    </NavLink>{" "}
                     <NavLink
                       to="/settings"
                       style={{ textDecoration: "none", color: "black" }}

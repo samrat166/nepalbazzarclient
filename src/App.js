@@ -20,6 +20,7 @@ import UserDetails from "./Components/UserDetails/UserDetails";
 import LoadMore from "./Components/LoadMore/LoadMore";
 import SubCategoryDesc from "./Components/SubCategoryDesc/SubCategoryDesc";
 import Footer from "./Components/Footer/Footer";
+import AdminPanel from "./Pages/AdminPanel";
 
 function App() {
   return (
@@ -67,6 +68,16 @@ function App() {
 
               <AddAPost />
               <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/admin-panel"
+          element={
+            <>
+              <Navbar />
+
+              <AdminPanel />
             </>
           }
         />
